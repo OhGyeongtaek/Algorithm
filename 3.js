@@ -19,17 +19,29 @@ const tester = () => {
     });
 }
 
+/* val = [cacheSize, cities, result] */
 const getActionTime = (val) => {
+    if (val[0] === 0) return 5 * val[1].length;
+
     let time = 0;
     let cache = [];
 
-    val[1].forEach(( city, idx ) => {
+    val[1].forEach(( city ) => {
         city = city.toUpperCase();
 
-        if( idx > val[0] ) cache.shift();
+        let idx = cache.indexOf(city);
 
-        time += ( cache.indexOf(city) !== -1 ) ? 1 : 5;
-        cache.push(city); 
+        if(idx > -1){
+           cache.splice(idx, 1);
+           time += 1;
+        } else {
+            if ( cache.length >= val[0] ) {
+                cache.shift();
+            }
+            time += 5;
+        }
+        
+        cache.push(city);
     });
     
     return time;
