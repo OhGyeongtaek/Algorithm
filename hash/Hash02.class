@@ -1,0 +1,18 @@
+// https://programmers.co.kr/learn/courses/30/lessons/42577
+//자바스크립트를 지원하지 않아 자바로 구현
+class Solution {
+    public boolean solution(String[] phone_book) {
+        boolean answer = true;
+        int cnt = phone_book.length;
+        
+        for( int i =0; i < cnt; i++ ){
+            if(!answer) break;
+            for ( int j = 0; j < cnt; j++ ){
+                if(i == j) continue;
+                if(!answer) break;
+                answer = phone_book[i].indexOf(phone_book[j]) != 0;
+            }
+        }
+        return answer;
+    }
+}
