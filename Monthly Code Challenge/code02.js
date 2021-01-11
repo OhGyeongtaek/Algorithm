@@ -17,20 +17,24 @@ function solution(n) {
         v = value
     */
     for (let x=0, y=0, v=0; v < max;) {
-        if (pyramid[y+1] && pyramid[y+1][x] === true && v < max) {
+        if (pyramid[y+1] && pyramid[y+1][x] === true) {
             pyramid[y++][x] = ++v;
             continue;
         }
         
-        if (pyramid[y] && pyramid[y][x+1] === true && v < max) {
+        if (pyramid[y][x+1] === true) {
             pyramid[y][x++] = ++v;
             continue;
         }
 
-        while (pyramid[y] && pyramid[y][x+1] !== true && y > 1 && v < max) {
-            if (pyramid[y][x] === true) {
-              pyramid[y--][x--] = ++v;
-            } else break;
+        while (pyramid[y][x+1] !== true && pyramid[y][x] === true && v < max) {
+          console.log(y, x)
+          pyramid[y][x] = ++v;
+
+          if (pyramid[y-1][x-1] === true) {
+            y--;
+            x--;
+          }
         }
     }
 
