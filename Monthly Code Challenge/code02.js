@@ -16,32 +16,27 @@ function solution(n) {
         y = y축 인덱스
         v = value
     */
-    for (let x=0, y=0, v=0; v < max;) {
-        if (pyramid[y+1] && pyramid[y+1][x] === true) {
-            pyramid[y++][x] = ++v;
-            continue;
-        }
-        
-        if (pyramid[y][x+1] === true) {
-            pyramid[y][x++] = ++v;
-            continue;
+    let x=0, y=0, v=1;
+
+    pyramid[y][x] = v;
+
+    while (v < max) {
+        while (pyramid[y+1] && pyramid[y+1][x] === true  && v < max) {
+            pyramid[++y][x] = ++v;
         }
 
-        while (pyramid[y][x+1] !== true && pyramid[y][x] === true && v < max) {
-          console.log(y, x)
-          pyramid[y][x] = ++v;
+        while (pyramid[y][x+1] === true && v < max) {
+            pyramid[y][++x] = ++v;
+        }
 
-          if (pyramid[y-1][x-1] === true) {
-            y--;
-            x--;
-          }
+        while (pyramid[y-1][x-1] === true && v < max) {
+            pyramid[--y][--x] = ++v;
         }
     }
 
     pyramid.forEach((row) => {
         answer = answer.concat(row);
     });
-    return pyramid;
     return answer;
 }
 
