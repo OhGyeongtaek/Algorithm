@@ -7,15 +7,12 @@ function solution(priorities, location) {
 
   while (checkIndex < priorities.length) {
     const item = items[checkIndex];
-    const idx = items.findIndex((find, idx) => {
-      return (
-        item !== find && //
-        item.value < find.value &&
-        checkIndex < idx
-      );
-    });
+    const isCheckPriority = items.some(
+      (find, idx) =>
+        item !== find && item.value < find.value && checkIndex < idx
+    );
 
-    if (idx > -1) {
+    if (isCheckPriority) {
       items.push(item);
       items.splice(checkIndex, 1);
     } else {
@@ -26,4 +23,4 @@ function solution(priorities, location) {
   return items.findIndex((item) => item.idx === location) + 1;
 }
 
-// console.log(solution([2, 1, 3, 2], 2) === 1);
+console.log(solution([2, 1, 3, 2], 2) === 1);
