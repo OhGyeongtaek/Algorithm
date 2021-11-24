@@ -10,6 +10,7 @@
   * [Hash02.class 전화번호 목록](https://programmers.co.kr/learn/courses/30/lessons/42577)
     * Javascript를 지원하지 않음
   * [Hash03.js 위장](https://programmers.co.kr/learn/courses/30/lessons/42578)
+  * [Hash04.js 베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)
 
 ## [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/challenges?tab=all_challenges)
 * kakao  
