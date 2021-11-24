@@ -18,6 +18,7 @@
 
 - [01.js 기능개발](https://programmers.co.kr/learn/courses/30/lessons/42586)
 - [02.js 프린터](https://programmers.co.kr/learn/courses/30/lessons/42587)
+- [03.js 다리를 지나는 트럭](https://programmers.co.kr/learn/courses/30/lessons/42583?language=javascript)
 
 ## [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/challenges?tab=all_challenges)
 
