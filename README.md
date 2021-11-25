@@ -20,6 +20,10 @@
 - [02.js 프린터](https://programmers.co.kr/learn/courses/30/lessons/42587)
 - [03.js 다리를 지나는 트럭](https://programmers.co.kr/learn/courses/30/lessons/42583?language=javascript)
 
+## [완전탐색](https://programmers.co.kr/learn/courses/30/parts/12230)
+
+- [01.js 모의고사](https://programmers.co.kr/learn/courses/30/lessons/42840)
+
 ## [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/challenges?tab=all_challenges)
 
 - kakao
