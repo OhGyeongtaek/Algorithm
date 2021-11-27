@@ -27,6 +27,7 @@
 ## [DFS](https://programmers.co.kr/learn/courses/30/parts/12421)
 
 - [01.js 네트워크](https://programmers.co.kr/learn/courses/30/lessons/43162)
+- [02.js 단어변환](https://programmers.co.kr/learn/courses/30/lessons/43163)
 
 ## [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/challenges?tab=all_challenges)
 
