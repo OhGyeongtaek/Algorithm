@@ -32,10 +32,14 @@
 
 ## [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/challenges?tab=all_challenges)
 
-- kakao
-  - [1.js [1차] 비밀지도](https://programmers.co.kr/learn/courses/30/lessons/17681)
-  - [2.js [1차] 다트게임](https://programmers.co.kr/learn/courses/30/lessons/17682)
-  - [3.js [1차] 캐시](https://programmers.co.kr/learn/courses/30/lessons/17680)
+- [1.js [1차] 비밀지도](https://programmers.co.kr/learn/courses/30/lessons/17681)
+- [2.js [1차] 다트게임](https://programmers.co.kr/learn/courses/30/lessons/17682)
+- [3.js [1차] 캐시](https://programmers.co.kr/learn/courses/30/lessons/17680)
+
+## 2021 카카오 채용연계형 인턴십
+
+- [01.js 숫자 문자열과 영단어](https://programmers.co.kr/learn/courses/30/lessons/81301)
+- [02.js 거리두기 확인하기](https://programmers.co.kr/learn/courses/30/lessons/81302)
 
 ## [월간 코드 첼린지 시즌1](https://programmers.co.kr/learn/challenges)
 
