@@ -8,40 +8,39 @@
 
 ## [Hash](https://programmers.co.kr/learn/courses/30/parts/12077)
 
-- [Hash01.js 완주하지 못한 선수](https://programmers.co.kr/learn/courses/30/lessons/42576)
-- [Hash02.class 전화번호 목록](https://programmers.co.kr/learn/courses/30/lessons/42577)
-  - Javascript를 지원하지 않음
-- [Hash03.js 위장](https://programmers.co.kr/learn/courses/30/lessons/42578)
-- [Hash04.js 베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)
+- [완주하지 못한 선수](https://github.com/OhGyeongtaek/Algorithm/blob/master/hash/hash01.js)
+- [전화번호 목록](https://github.com/OhGyeongtaek/Algorithm/blob/master/hash/hash02.class)
+- [위장](https://github.com/OhGyeongtaek/Algorithm/blob/master/hash/hash03.js)
+- [베스트앨범](https://github.com/OhGyeongtaek/Algorithm/blob/master/hash/hash04.js)
 
 ## [Stack/Queue](https://programmers.co.kr/learn/courses/30/parts/12081)
 
-- [01.js 기능개발](https://programmers.co.kr/learn/courses/30/lessons/42586)
-- [02.js 프린터](https://programmers.co.kr/learn/courses/30/lessons/42587)
-- [03.js 다리를 지나는 트럭](https://programmers.co.kr/learn/courses/30/lessons/42583?language=javascript)
+- [기능개발](https://github.com/OhGyeongtaek/Algorithm/blob/master/stack%2Cqueue/01.js)
+- [프린터](https://github.com/OhGyeongtaek/Algorithm/blob/master/stack%2Cqueue/02.js)
+- [다리를 지나는 트럭](https://github.com/OhGyeongtaek/Algorithm/blob/master/stack%2Cqueue/02.js)
 
 ## [완전탐색](https://programmers.co.kr/learn/courses/30/parts/12230)
 
-- [01.js 모의고사](https://programmers.co.kr/learn/courses/30/lessons/42840)
+- [모의고사](https://github.com/OhGyeongtaek/Algorithm/blob/master/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/01.js)
 
 ## [DFS](https://programmers.co.kr/learn/courses/30/parts/12421)
 
-- [01.js 네트워크](https://programmers.co.kr/learn/courses/30/lessons/43162)
-- [02.js 단어변환](https://programmers.co.kr/learn/courses/30/lessons/43163)
-- [03.js 여행경로](https://programmers.co.kr/learn/courses/30/lessons/43164)
+- [네트워크](https://github.com/OhGyeongtaek/Algorithm/blob/master/DFS/01.js)
+- [단어변환](https://github.com/OhGyeongtaek/Algorithm/blob/master/DFS/02.js)
+- [여행경로](https://github.com/OhGyeongtaek/Algorithm/blob/master/DFS/03.js)
 
 ## [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/challenges?tab=all_challenges)
 
-- [1.js [1차] 비밀지도](https://programmers.co.kr/learn/courses/30/lessons/17681)
-- [2.js [1차] 다트게임](https://programmers.co.kr/learn/courses/30/lessons/17682)
-- [3.js [1차] 캐시](https://programmers.co.kr/learn/courses/30/lessons/17680)
+- [비밀지도](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018/1.js)
+- [다트게임](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018/2.js)
+- [캐시](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018/3.js)
 
 ## 2021 카카오 채용연계형 인턴십
 
-- [01.js 숫자 문자열과 영단어](https://programmers.co.kr/learn/courses/30/lessons/81301)
-- [02.js 거리두기 확인하기](https://programmers.co.kr/learn/courses/30/lessons/81302)
+- [숫자 문자열과 영단어](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021%20%EC%9D%B8%ED%84%B4%EC%89%BD/01.js)
+- [거리두기 확인하기](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021%20%EC%9D%B8%ED%84%B4%EC%89%BD/02.js)
 
 ## [월간 코드 첼린지 시즌1](https://programmers.co.kr/learn/challenges)
 
-- Monthly Code Challenge
-  - [1.두개 뽑아서 더하기](https://programmers.co.kr/learn/courses/30/lessons/68644)
+- [두개 뽑아서 더하기](https://github.com/OhGyeongtaek/Algorithm/blob/master/Monthly%20Code%20Challenge/01.js)
+- [삼각 달팽이](https://github.com/OhGyeongtaek/Algorithm/blob/master/Monthly%20Code%20Challenge/02.js)
