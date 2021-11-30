@@ -33,7 +33,6 @@ function solution(n, s, a, b, fares) {
   let answer = INF;
 
   for (let i = 0; i < n; i++) {
-    // console.log(dist[s][i], dist[i][a], dist[i][b]);
     answer = Math.min(answer, dist[s][i] + dist[i][a] + dist[i][b]);
   }
 
