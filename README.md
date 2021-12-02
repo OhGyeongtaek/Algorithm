@@ -33,6 +33,7 @@
 
 - [택시 합승요금](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021%20KAKAO%20BLIND%20RECRUITMENT/01.js)
 - [신규 아이디 추천](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021%20KAKAO%20BLIND%20RECRUITMENT/02.js)
+- [메뉴 리뉴얼](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021%20KAKAO%20BLIND%20RECRUITMENT/03.js)
 
 ## [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/challenges?tab=all_challenges)
 
