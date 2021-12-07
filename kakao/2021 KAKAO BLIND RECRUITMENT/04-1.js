@@ -1,34 +1,40 @@
 const values = [
   // languges
-  ["cpp", "java", "python"],
+  ["cpp", "java", "python", "-"],
   //jobs
-  ["backend", "frontend"],
+  ["backend", "frontend", "-"],
   // careers
-  ["junior", "senior"],
+  ["junior", "senior", "-"],
   // foods
-  ["chicken", "pizza"],
+  ["chicken", "pizza", "-"],
 ];
 
 function solution(infos, queries) {
+  const answer = [];
   const list = {};
 
-  function DFS(info, idx, map) {
-    if (idx === 3) {
-      if (!map["-"]) map["-"] = [];
-      if (!map[info[idx]]) map[info[idx]] = [];
-
-      map[info[idx]].push(info[4]);
-      map["-"].push(info[4]);
-
+  (function createList(map, depth) {
+    if (depth === 3) {
+      values[depth].forEach((value) => {
+        map[value] = [];
+      });
       return;
     }
 
-    if (!map[info[idx]]) {
-      map[info[idx]] = {};
-    }
+    values[depth].forEach((value) => {
+      map[value] = {};
+      createList(map[value], depth + 1);
+    });
+  })(list, 0);
 
-    if (!map["-"]) {
-      map["-"] = {};
+  function DFS(info, idx, map) {
+    if (idx === 3) {
+      const score = Number(info[4]);
+
+      map[info[idx]].push(score);
+      map["-"].push(score);
+
+      return;
     }
 
     DFS(info, idx + 1, map[info[idx]]);
@@ -39,13 +45,23 @@ function solution(infos, queries) {
     DFS(info.split(" "), 0, list);
   });
 
-  return queries.map((query, idx) => {
-    const datas = query.split(" ").filter((data) => data !== "and");
+  queries.forEach((query) => {
+    const datas = query.split(" ");
 
-    return list[datas[0]][datas[1]][datas[2]][datas[3]].filter((score) => {
-      return Number(datas[4]) <= Number(score);
-    }).length;
+    const target = list[datas[0]][datas[2]][datas[4]][datas[6]];
+
+    let cnt = 0;
+
+    for (let i = 0; i < target.length; i++) {
+      if (Number(datas[7]) <= target[i]) {
+        cnt++;
+      }
+    }
+
+    answer.push(cnt);
   });
+
+  return answer;
 }
 
 console.log(
