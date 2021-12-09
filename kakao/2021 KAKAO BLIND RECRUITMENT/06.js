@@ -6,107 +6,104 @@ const DIRECTIONS = [
   [0, -1], //왼쪽
 ];
 
+const INF = 9999999;
+
 function solution(board, r, c) {
-  var answer = 9999999;
+  function permutate(now) {
+    let result = INF;
 
-  const visited = [...new Array(4).fill().map(() => [])];
+    for (let i = 1; i <= 6; i++) {
+      const targets = [];
 
-  const Q = [{ r, c, cnt: 0, newBoard: board, selected: [], visited }];
-
-  while (Q.length > 0) {
-    let { r, c, cnt, newBoard, selected, visited } = Q.shift();
-
-    console.log(r, c, cnt);
-    const value = board[r][c];
-
-    if (value > 0) {
-      // 선택된 카드가 있는 경우
-      if (selected.length > 0) {
-        if (value === selected.value) {
-          newBoard[r][c] = 0;
-          newBoard[selected.r][selected.c] = 0;
-
-          cnt++;
-          selected = [];
-
-          let isFinish = true;
-
-          for (let i = 0; i < 4 && isFinish; i++) {
-            for (let j = 0; j < 4 && isFinish; j++) {
-              if (newBoard[i][j] > 0) {
-                isFinish = false;
-              }
-            }
-          }
-
-          if (isFinish) {
-            answer = Math.min(cnt, answer);
-            break;
+      for (let r = 0; r < 4; r++) {
+        for (let c = 0; c < 4; c++) {
+          if (board[r][c] === i) {
+            targets.push({ r, c, cnt: 0 });
           }
         }
-      } else {
-        selected = [r, c, value];
-        cnt++;
-      }
-    }
-
-    visited[r][c] = true;
-
-    DIRECTIONS.forEach((D) => {
-      const newR = r + D[0];
-      const newC = c + D[1];
-
-      if (newR < 0 || newC < 0 || newR > 3 || newC > 3) {
-        return;
       }
 
-      if (visited[newR][newC]) {
-        return;
-      }
+      if (targets.length === 0) continue;
 
-      Q.push({
-        r: newR,
-        c: newC,
-        cnt: cnt + 1,
-        selected: [...selected],
-        visited: visited.map((obj) => [...obj]),
-        newBoard: newBoard.map((obj) => [...obj]),
+      const case1 = bfs(now, targets[0]) + bfs(targets[0], targets[1]) + 2;
+      const case2 = bfs(now, targets[1]) + bfs(targets[1], targets[0]) + 2;
+
+      targets.forEach((target) => {
+        board[target.r][target.c] = 0;
       });
 
-      const ctrlValue = getCtrlValue(D, r, c, newBoard);
+      result = Math.min(result, case1 + permutate(targets[1]));
+      result = Math.min(result, case2 + permutate(targets[0]));
 
-      if (newBoard[newR][newC] === 0 && ctrlValue) {
-        Q.push({
-          r: ctrlValue.r,
-          c: ctrlValue.c,
-          cnt: cnt + 1,
-          selected: [...selected],
-          visited: visited.map((obj) => [...obj]),
-          newBoard: newBoard.map((obj) => [...obj]),
-        });
-      }
-    });
-  }
-
-  function getCtrlValue(D, r, c, board) {
-    let newR = r;
-    let newC = c;
-
-    while (true) {
-      newR += D[0];
-      newC += D[1];
-
-      if (newR < 0 || newC < 0 || newR > 3 || newC > 3) {
-        return { r: newR - D[0], c: newC - D[1] };
-      }
-
-      if (board[newR][newC] > 0) {
-        return { r: newR, c: newC };
-      }
+      targets.forEach((target) => {
+        board[target.r][target.c] = i;
+      });
     }
+
+    if (result === INF) return 0;
+
+    return result;
   }
 
-  return answer;
+  function bfs(now, dist) {
+    let result = INF;
+
+    const visited = [...new Array(4).fill().map(() => [])];
+    const Q = [now];
+
+    while (Q.length > 0) {
+      const pointer = Q.shift();
+
+      if (pointer.r == dist.r && pointer.c === dist.c) {
+        return pointer.cnt;
+      }
+
+      visited[pointer.r][pointer.c];
+
+      DIRECTIONS.forEach((D) => {
+        let nr = pointer.r + D[0];
+        let nc = pointer.c + D[1];
+
+        if (nr < 0 || nc < 0 || nr > 3 || nc > 3) {
+          return;
+        }
+
+        if (visited[nr][nc]) {
+          return;
+        }
+
+        Q.push({ r: nr, c: nc, cnt: pointer.cnt + 1 });
+
+        for (let i = 0; i < 3; i++) {
+          if (
+            nr + D[0] < 0 ||
+            nc + D[1] < 0 ||
+            nr + D[0] > 3 ||
+            nc + D[1] > 3
+          ) {
+            break;
+          }
+
+          if (board[nr][nc] !== 0) {
+            break;
+          }
+
+          nr += D[0];
+          nc += D[1];
+        }
+
+        if (visited[nr][nc]) {
+          return;
+        }
+
+        Q.push({ r: nr, c: nc, cnt: pointer.cnt + 1 });
+      });
+    }
+
+    return result;
+  }
+
+  return permutate({ r, c, cnt: 0 });
 }
 
 console.log(

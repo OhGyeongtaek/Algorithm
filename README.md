@@ -50,6 +50,7 @@
 - [순위 검색](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021%20%EC%9D%B8%ED%84%B4%EC%89%BD/04.js)
   - 효율성 테스트를 통과하지 못함.
 - [광고 삽입](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021%20%EC%9D%B8%ED%84%B4%EC%89%BD/05.js)
+- [카드 짝 맞추기](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021%20%EC%9D%B8%ED%84%B4%EC%89%BD/06.js)
 
 ## [월간 코드 첼린지 시즌1](https://programmers.co.kr/learn/challenges)
 
