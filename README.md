@@ -55,6 +55,7 @@
 ## 2020 KAKAO BLIND RECRUITMENT
 
 - [가사 검색](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2020_KAKAO_BLIND_RECRUITMENT/01.js)
+- [문자열 압축](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2020_KAKAO_BLIND_RECRUITMENT/02.js)
 
 ## [월간 코드 첼린지 시즌1](https://programmers.co.kr/learn/challenges)
 
