@@ -58,6 +58,7 @@
 - [문자열 압축](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2020_KAKAO_BLIND_RECRUITMENT/02.js)
 - [괄호 변환](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2020_KAKAO_BLIND_RECRUITMENT/03.js)
 - [자물쇠와 열쇠](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2020_KAKAO_BLIND_RECRUITMENT/04.js)
+- [기둥과 보 설치](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2020_KAKAO_BLIND_RECRUITMENT/05.js)
 
 ## [월간 코드 첼린지 시즌1](https://programmers.co.kr/learn/challenges)
 
