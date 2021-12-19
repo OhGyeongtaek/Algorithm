@@ -63,6 +63,7 @@
 ## 2019 KAKAO BLIND RECRUITMENT
 
 - [오픈 채팅방](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2019_KAKAO_BLIND_RECRUITMENT/01.js)
+- [실패율](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2019_KAKAO_BLIND_RECRUITMENT/02.js)
 
 ## [월간 코드 첼린지 시즌1](https://programmers.co.kr/learn/challenges)
 
