@@ -7,7 +7,6 @@ function solution(nodeinfo) {
     y,
     left: null,
     right: null,
-    isUsed: false,
   }));
 
   // 정렬
@@ -20,8 +19,6 @@ function solution(nodeinfo) {
 
     return yGap;
   });
-
-  const len = nodes.length;
 
   nodes.forEach((node, idx) => {
     if (idx === 0) return;
@@ -36,7 +33,6 @@ function solution(nodeinfo) {
     const direction = node.x > target.x ? "right" : "left";
 
     if (target[direction] === null) {
-      console.log(node.id + 1, idx, direction);
       nodes[idx][direction] = node;
     } else {
       lookup(node, nodes.indexOf(target[direction]));
