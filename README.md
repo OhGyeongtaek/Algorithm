@@ -66,6 +66,7 @@
 - [실패율](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2019_KAKAO_BLIND_RECRUITMENT/02.js)
 - [길찾기 게임](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2019_KAKAO_BLIND_RECRUITMENT/03.js)
 - [매칭 점수](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2019_KAKAO_BLIND_RECRUITMENT/04.js)
+- [블록 게임](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2019_KAKAO_BLIND_RECRUITMENT/05.js)
 
 ## [월간 코드 첼린지 시즌1](https://programmers.co.kr/learn/challenges)
 
