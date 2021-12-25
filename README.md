@@ -37,12 +37,6 @@
 - [순위 검색](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021%20KAKAO%20BLIND%20RECRUITMENT/04.js)
   - 성능테스트를 통과하지 못함
 
-## [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/challenges?tab=all_challenges)
-
-- [비밀지도](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018/1.js)
-- [다트게임](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018/2.js)
-- [캐시](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018/3.js)
-
 ## 2021 카카오 채용연계형 인턴십
 
 - [숫자 문자열과 영단어](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021%20%EC%9D%B8%ED%84%B4%EC%89%BD/01.js)
@@ -72,3 +66,10 @@
 
 - [두개 뽑아서 더하기](https://github.com/OhGyeongtaek/Algorithm/blob/master/Monthly%20Code%20Challenge/01.js)
 - [삼각 달팽이](https://github.com/OhGyeongtaek/Algorithm/blob/master/Monthly%20Code%20Challenge/02.js)
+
+## 2018 KAKAO BLIND RECRUITMENT
+
+- [비밀지도](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/01.js)
+- [다트게임](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/02.js)
+- [캐시](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/03.js)
+- [추석 트래픽](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/04.js)
