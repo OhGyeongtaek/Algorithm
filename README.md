@@ -74,3 +74,4 @@
 - [캐시](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/03.js)
 - [추석 트래픽](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/04.js)
 - [뉴스 클러스터링](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/05.js)
+- [셔틀버스](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/06.js)
