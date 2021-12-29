@@ -69,9 +69,10 @@
 
 ## 2018 KAKAO BLIND RECRUITMENT
 
-- [비밀지도](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/01.js)
-- [다트게임](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/02.js)
-- [캐시](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/03.js)
-- [추석 트래픽](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/04.js)
-- [뉴스 클러스터링](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/05.js)
-- [셔틀버스](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/06.js)
+- [비밀지도](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/1.js)
+- [다트게임](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/2.js)
+- [캐시](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/3.js)
+- [추석 트래픽](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/4.js)
+- [뉴스 클러스터링](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/5.js)
+- [셔틀버스](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/6.js)
+- [프렌즈4블록](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2018_KAKAO_BLIND_RECRUITMENT/7.js)
