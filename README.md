@@ -54,6 +54,14 @@
 - [자물쇠와 열쇠](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2020_KAKAO_BLIND_RECRUITMENT/04.js)
 - [기둥과 보 설치](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2020_KAKAO_BLIND_RECRUITMENT/05.js)
 
+## 2020 KAKAO INTERNSHIP
+
+- [보석쇼핑](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2020_KAKAO_BLIND_RECRUITMENT/03-1.js)
+  - 투포인터 알고리즘으로 해결
+  - 참고자료
+    - [[2020 카카오 인턴십] 보석쇼핑 JavaScript](https://velog.io/@ansrjsdn/2020-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EC%9D%B8%ED%84%B4%EC%8B%AD-%EB%B3%B4%EC%84%9D%EC%87%BC%ED%95%91-JavaScript)
+    - [코딩 테스트 & 알고리즘 대회 핵심 노트 - 투 포인터(Two Pointers), 구간 합(Prefix Sum)](https://www.youtube.com/watch?v=rI8NRQsAS_s)
+
 ## 2019 KAKAO BLIND RECRUITMENT
 
 - [오픈 채팅방](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2019_KAKAO_BLIND_RECRUITMENT/01.js)
