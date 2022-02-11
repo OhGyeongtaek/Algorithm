@@ -35,6 +35,7 @@
 - [k진수에서 소수 개수 구하기](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2022_KAKAO_BLIND_RECRUITMENT/2.js)
 - [주차 요금 계산](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2022_KAKAO_BLIND_RECRUITMENT/3.js)
 - [양궁대회](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2022_KAKAO_BLIND_RECRUITMENT/4.js)
+- [양과 늑대](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2022_KAKAO_BLIND_RECRUITMENT/5.js)
 
 ## 2021 KAKAO BLIND RECRUITMENT
 
