@@ -36,6 +36,7 @@
 - [주차 요금 계산](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2022_KAKAO_BLIND_RECRUITMENT/3.js)
 - [양궁대회](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2022_KAKAO_BLIND_RECRUITMENT/4.js)
 - [양과 늑대](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2022_KAKAO_BLIND_RECRUITMENT/5.js)
+- [파괴되지 않은 건물](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2022_KAKAO_BLIND_RECRUITMENT/6.js)
 
 ## 2021 KAKAO BLIND RECRUITMENT
 
