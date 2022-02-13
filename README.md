@@ -29,6 +29,10 @@
 - [단어변환](https://github.com/OhGyeongtaek/Algorithm/blob/master/DFS/02.js)
 - [여행경로](https://github.com/OhGyeongtaek/Algorithm/blob/master/DFS/03.js)
 
+## BFS
+
+- [게임 맵 최단거리](https://github.com/OhGyeongtaek/Algorithm/blob/master/BFS/1.js)
+
 ## 2022 KAKAO BLIND RECRUITMENT
 
 - [신고 결과 받기](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2022_KAKAO_BLIND_RECRUITMENT/1.js)
