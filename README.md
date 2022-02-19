@@ -101,4 +101,4 @@
 ## 2021 Dev-Matching: 웹 백엔드 개발자(상반기)
 
 - 행렬 테두리 회전하기
-  - [`문제`](https://programmers.co.kr/learn/courses/30/lessons/77485) [풀이](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021_Dev_Matching_Backend/1.js)
+  - [`문제`](https://programmers.co.kr/learn/courses/30/lessons/77485) [`풀이`](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021_Dev_Matching_Backend/1.js)
