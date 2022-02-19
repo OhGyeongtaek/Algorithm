@@ -1,60 +1,44 @@
 function solution(numbers) {
-  let answer = 0;
+  const N = numbers.length;
+  const judged = {}; // 중복해서 세지 않도록 소수라고 판별한 숫자를 저장
+  const isUsed = [...Array(N)].map(() => 0);
+  let ans = 0;
 
-  const cards = numbers.split("").map((num) => ({ num }));
+  // 계획 2 - 소수 판별하기
+  const isPrime = (number) => {
+    if (number <= 1) return false;
 
-  cards.forEach((card) => {
-    const num1 = card.num;
+    const sqrt = Math.sqrt(number);
 
-    if (num1 === "0") return;
-
-    if (isCount(num1)) {
-      countValues.push(num1);
-      answer++;
+    for (let i = 2; i <= sqrt; i++) {
+      if (number % i == 0) return false;
     }
 
-    const cards2 = filterDuplicationNumber(cards, card);
+    return true;
+  };
 
-    cards2.forEach((card2) => {
-      const num2 = `${num1}${card2.num}`;
-      const cards3 = filterDuplicationNumber(cards2, card2);
+  // 계획 1 - 모든 숫자의 순열을 만듭니다.
+  (function f(depth, number) {
+    // 깊이가 0보다 클 때 숫자 순열이 만들어집니다.
+    if (depth > 0) {
+      const parseNumber = Number(number);
 
-      if (isCount(num2)) {
-        countValues.push(num2);
-        answer++;
+      if (!judged[parseNumber] && isPrime(parseNumber)) {
+        ans++;
+        judged[parseNumber] = 1;
       }
+    }
 
-      cards3.forEach((card3) => {
-        const num3 = `${num2}${card3.num}`;
+    if (depth == N) return;
 
-        if (isCount(num3)) {
-          countValues.push(num3);
-          answer++;
-        }
-      });
-    });
-  });
+    for (let i = 0; i < N; i++) {
+      if (isUsed[i]) continue;
 
-  return answer;
+      isUsed[i] = 1;
+      f(depth + 1, number + numbers[i]);
+      isUsed[i] = 0;
+    }
+  })(0, "");
+
+  return ans;
 }
-
-const countValues = [];
-
-const filterDuplicationNumber = (objs, checkObj) =>
-  objs.filter((obj) => obj !== checkObj);
-
-const isCount = (number) => {
-  return isPrime(number) && countValues.indexOf(number) === -1;
-};
-
-const isPrime = (number) => {
-  if (number < 2) return false;
-
-  for (let i = 2; i <= Math.sqrt(number); i++) {
-    if (number % i == 0) return false;
-  }
-
-  return true;
-};
-
-console.log(solution("011") === 2);
