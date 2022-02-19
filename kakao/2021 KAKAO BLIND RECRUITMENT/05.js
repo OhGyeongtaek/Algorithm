@@ -1,66 +1,120 @@
-function solution(play_time, adv_time, logs) {
-  if (play_time === adv_time) {
-    return "00:00:00";
-  }
+//[ROW, COL]
+const DIRECTIONS = [
+  [-1, 0], //위
+  [1, 0], // 아래
+  [0, 1], // 오른쪽
+  [0, -1], //왼쪽
+];
 
-  const play_second = toSeconds(play_time);
-  const adv_second = toSeconds(adv_time);
+const INF = 9999999;
 
-  const acc = Array.from({ length: play_second + 1 }, () => 0);
+function solution(board, r, c) {
+  function permutate(now) {
+    let result = INF;
 
-  logs.forEach((log) => {
-    const [start, end] = log.split("-");
+    for (let i = 1; i <= 6; i++) {
+      const targets = [];
 
-    acc[toSeconds(start)]++;
-    acc[toSeconds(end)]--;
-  });
+      for (let r = 0; r < 4; r++) {
+        for (let c = 0; c < 4; c++) {
+          if (board[r][c] === i) {
+            targets.push({ r, c, cnt: 0 });
+          }
+        }
+      }
 
-  let max = {
-    idx: 0,
-    value: 0,
-  };
+      if (targets.length === 0) continue;
 
-  for (let i = 1; i <= play_second; i++) acc[i] += acc[i - 1];
+      const case1 = bfs(now, targets[0]) + bfs(targets[0], targets[1]) + 2;
+      const case2 = bfs(now, targets[1]) + bfs(targets[1], targets[0]) + 2;
 
-  for (let i = 0; i <= adv_second; i++) max.value += acc[i];
+      targets.forEach((target) => {
+        board[target.r][target.c] = 0;
+      });
 
-  let cur = max.value;
+      result = Math.min(result, case1 + permutate(targets[1]));
+      result = Math.min(result, case2 + permutate(targets[0]));
 
-  for (let i = adv_second + 1; i < play_second; i++) {
-    cur = cur - acc[i - adv_second] + acc[i];
-
-    if (cur > max.value) {
-      max = {
-        idx: i - adv_second + 1,
-        value: cur,
-      };
+      targets.forEach((target) => {
+        board[target.r][target.c] = i;
+      });
     }
+
+    if (result === INF) return 0;
+
+    return result;
   }
 
-  return toHHMMSS(max.idx);
+  function bfs(now, dist) {
+    let result = INF;
+
+    const visited = [...new Array(4).fill().map(() => [])];
+    const Q = [now];
+
+    while (Q.length > 0) {
+      const pointer = Q.shift();
+
+      if (pointer.r == dist.r && pointer.c === dist.c) {
+        return pointer.cnt;
+      }
+
+      visited[pointer.r][pointer.c];
+
+      DIRECTIONS.forEach((D) => {
+        let nr = pointer.r + D[0];
+        let nc = pointer.c + D[1];
+
+        if (nr < 0 || nc < 0 || nr > 3 || nc > 3) {
+          return;
+        }
+
+        if (visited[nr][nc]) {
+          return;
+        }
+
+        Q.push({ r: nr, c: nc, cnt: pointer.cnt + 1 });
+
+        for (let i = 0; i < 3; i++) {
+          if (
+            nr + D[0] < 0 ||
+            nc + D[1] < 0 ||
+            nr + D[0] > 3 ||
+            nc + D[1] > 3
+          ) {
+            break;
+          }
+
+          if (board[nr][nc] !== 0) {
+            break;
+          }
+
+          nr += D[0];
+          nc += D[1];
+        }
+
+        if (visited[nr][nc]) {
+          return;
+        }
+
+        Q.push({ r: nr, c: nc, cnt: pointer.cnt + 1 });
+      });
+    }
+
+    return result;
+  }
+
+  return permutate({ r, c, cnt: 0 });
 }
 
-const toSeconds = (time) => {
-  const values = time.split(":");
-
-  return values[0] * 60 * 60 + values[1] * 60 + parseInt(values[2]);
-};
-
-const toHHMMSS = (second) => {
-  const hh = Math.floor(second / 3600);
-  const mm = Math.floor((second % 3600) / 60);
-  const ss = second - hh * 3600 - mm * 60;
-
-  return `${hh.toString().padStart(2, "0")}:${mm
-    .toString()
-    .padStart(2, "0")}:${ss.toString().padStart(2, "0")}`;
-};
-
 console.log(
-  solution("99:59:59", "25:00:00", [
-    "69:59:59-89:59:59",
-    "01:00:00-21:00:00",
-    "79:59:59-99:59:59",
-    "11:00:00-31:00:00",
-  ])
+  solution(
+    [
+      [1, 0, 0, 3],
+      [2, 0, 0, 0],
+      [0, 0, 0, 2],
+      [3, 0, 1, 0],
+    ],
+    1,
+    0
+  )
 );

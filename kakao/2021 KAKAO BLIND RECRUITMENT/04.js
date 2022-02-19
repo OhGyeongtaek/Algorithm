@@ -1,57 +1,57 @@
-const languges = ["cpp", "java", "python"];
-const jobs = ["backend", "frontend"];
-const careers = ["junior", "senior"];
-const foods = ["chicken", "pizza"];
+function solution(play_time, adv_time, logs) {
+  if (play_time === adv_time) {
+    return "00:00:00";
+  }
 
-function solution(infos, queries) {
-  const candidates = infos.map((info) => {
-    const [languge, job, career, food, score] = info.split(" ");
+  const play_second = toSeconds(play_time);
+  const adv_second = toSeconds(adv_time);
 
-    return { languge, job, career, food, score };
+  const acc = Array.from({ length: play_second + 1 }, () => 0);
+
+  logs.forEach((log) => {
+    const [start, end] = log.split("-");
+
+    acc[toSeconds(start)]++;
+    acc[toSeconds(end)]--;
   });
 
-  return queries.map((query, idx) => {
-    const datas = query.split(" ").filter((data) => data !== "and");
+  let max = {
+    idx: 0,
+    value: 0,
+  };
 
-    return candidates.filter((candidate) => {
-      if (datas[0] !== candidate["languge"] && datas[0] !== "-") {
-        return false;
-      }
+  for (let i = 1; i <= play_second; i++) acc[i] += acc[i - 1];
 
-      if (datas[1] !== candidate["job"] && datas[1] !== "-") {
-        return false;
-      }
+  for (let i = 0; i <= adv_second; i++) max.value += acc[i];
 
-      if (datas[2] !== candidate["career"] && datas[2] !== "-") {
-        return false;
-      }
+  let cur = max.value;
 
-      if (datas[3] !== candidate["food"] && datas[3] !== "-") {
-        return false;
-      }
+  for (let i = adv_second + 1; i < play_second; i++) {
+    cur = cur - acc[i - adv_second] + acc[i];
 
-      return Number(datas[4]) <= Number(candidate["score"]);
-    }).length;
-  });
+    if (cur > max.value) {
+      max = {
+        idx: i - adv_second + 1,
+        value: cur,
+      };
+    }
+  }
+
+  return toHHMMSS(max.idx);
 }
 
-console.log(
-  solution(
-    [
-      "java backend junior pizza 150",
-      "python frontend senior chicken 210",
-      "python frontend senior chicken 150",
-      "cpp backend senior pizza 260",
-      "java backend junior chicken 80",
-      "python backend senior chicken 50",
-    ],
-    [
-      "java and backend and junior and pizza 100",
-      "python and frontend and senior and chicken 200",
-      "cpp and - and senior and pizza 250",
-      "- and backend and senior and - 150",
-      "- and - and - and chicken 100",
-      "- and - and - and - 150",
-    ]
-  )
-);
+const toSeconds = (time) => {
+  const values = time.split(":");
+
+  return values[0] * 60 * 60 + values[1] * 60 + parseInt(values[2]);
+};
+
+const toHHMMSS = (second) => {
+  const hh = Math.floor(second / 3600);
+  const mm = Math.floor((second % 3600) / 60);
+  const ss = second - hh * 3600 - mm * 60;
+
+  return `${hh.toString().padStart(2, "0")}:${mm
+    .toString()
+    .padStart(2, "0")}:${ss.toString().padStart(2, "0")}`;
+};
