@@ -77,8 +77,7 @@
 - 카드 짝 맞추기
   - [`문제`](https://programmers.co.kr/learn/courses/30/lessons/72415) [`풀이`](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021%20%EC%9D%B8%ED%84%B4%EC%89%BD/05.js)
 - 순위검색
-  - [`문제`](https://programmers.co.kr/learn/courses/30/lessons/72412) [`풀이`](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021%20%EC%9D%B8%ED%84%B4%EC%89%BD/06-no-clear.js)
-  - 효율성 테스트를 통과하지 못했습니다.
+  - [`문제`](https://programmers.co.kr/learn/courses/30/lessons/72412) [`풀이`](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021%20%EC%9D%B8%ED%84%B4%EC%89%BD/06.js)
 
 ## 2021 카카오 채용연계형 인턴십
 
