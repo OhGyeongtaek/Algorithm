@@ -153,3 +153,8 @@
 
 - 행렬 테두리 회전하기
   - [`문제`](https://programmers.co.kr/learn/courses/30/lessons/77485) [`풀이`](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021_Dev_Matching_Backend/1.js)
+- 다단계 칫솔 판매
+  - [`문제`](https://programmers.co.kr/learn/courses/30/lessons/77486) [`풀이`](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021_Dev_Matching_Backend/2.js)
+  - [`참고 풀이`](https://velog.io/@longroadhome/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-LV.3-%EB%8B%A4%EB%8B%A8%EA%B3%84-%EC%B9%AB%EC%86%94-%ED%8C%90%EB%A7%A4-JS);
+  - Iterative DFS로 풀이
+  - (signal: aborted (core dumped)) 에러 발생으로 풀지 못함
