@@ -158,3 +158,5 @@
   - [`참고 풀이`](https://velog.io/@longroadhome/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-LV.3-%EB%8B%A4%EB%8B%A8%EA%B3%84-%EC%B9%AB%EC%86%94-%ED%8C%90%EB%A7%A4-JS);
   - Iterative DFS로 풀이
   - (signal: aborted (core dumped)) 에러 발생으로 풀지 못함
+- 로또의 최고 순위와 최저 순위
+  - [`문제`](https://programmers.co.kr/learn/courses/30/lessons/77484) [`풀이`](https://github.com/OhGyeongtaek/Algorithm/blob/master/kakao/2021_Dev_Matching_Backend/3.js)
